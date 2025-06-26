@@ -47,7 +47,7 @@ void draw() {
       xDirections[i] = xDirections[i] * -1;
     }
 
-    if (yPositions[i] > height || yPositions[i] < 0) {
+    if (yPositions[i] >= height || yPositions[i] < 0) {
       yDirections[i] = yDirections[i] * -1;
     }
 
