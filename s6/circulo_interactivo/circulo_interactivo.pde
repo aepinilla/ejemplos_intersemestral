@@ -1,5 +1,6 @@
-int size = 200;
-float radio;
+int diametro = 200;
+float radio = diametro / 2 ;
+float circunferencia = diametro * TWO_PI;
 
 int centroHorizontal;
 int centroVertical;
@@ -15,8 +16,12 @@ void draw() {
   noStroke();
   
   float d = dist(mouseX, mouseY, centroHorizontal, centroVertical);
-  println(d);
-
-  //rectMode(CENTER);
-  //rect(centroHorizontal, centroVertical, size, size);
+  
+  if(d < radio) {
+    fill(45, 60, 90);
+  } else {
+    fill(255);
+  }
+  
+  ellipse(centroHorizontal, centroVertical, diametro, diametro);
 }
