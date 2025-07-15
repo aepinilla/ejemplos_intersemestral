@@ -3,15 +3,21 @@ Perro miPerro;
 
 void setup() {
   size(1000, 1000);
-  miGato = new Gato(color(255, 100, 50), 50, height/2, 1);
-  miPerro = new Perro(color(255, 100, 50), 50, height/2, 1);
+  //                color              // posX  posY velocidad
+  miGato = new Gato(color(255, 100, 50),  50,   100, 10);
+  miPerro = new Perro(color(20, 100, 50), 50,   500, 1);
 }
 
 void draw() {
   background(255);
 
-  //miGato.display();
-  //miGato.correr();
+  miGato.display();
+  miGato.correr();
+  miPerro.display();
+  miPerro.correr();
+  
+  miGato.maullar();
+  miPerro.ladrar();
 }
 
 // Clase padre
